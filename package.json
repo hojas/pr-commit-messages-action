@@ -1,6 +1,6 @@
 {
   "name": "pr-commit-messages-action",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -19,10 +19,10 @@
   },
   "homepage": "https://github.com/kzdjs/pr-commit-messages-action#readme",
   "dependencies": {
-    "@actions/core": "^1.2.6",
-    "@actions/github": "^4.0.0"
+    "@actions/core": "^1.10.0",
+    "@actions/github": "^5.1.1"
   },
   "devDependencies": {
-    "@vercel/ncc": "^0.27.0"
+    "@vercel/ncc": "^0.34.0"
   }
 }
