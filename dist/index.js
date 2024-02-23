@@ -30715,23 +30715,21 @@ var __webpack_exports__ = {};
 
 
 try {
-  const { payload } = _actions_github__WEBPACK_IMPORTED_MODULE_1__.context
-  const { commits } = payload
-  console.log('payload', payload)
-  console.log('commits', commits)
+  const { commits } = _actions_github__WEBPACK_IMPORTED_MODULE_1__.context.payload
+  console.log('commits:', commits)
 
   if (!commits) {
     _actions_core__WEBPACK_IMPORTED_MODULE_0__.setOutput('commits', 'No commit')
   }
   else {
-    const commits = payload.commits
+    const commitsStr = commits
       .map(c => c.message)
       .filter(m => !m.startsWith('Merge pull request'))
       .map(m => m.replace(/\n+(.*)/g, '\n> $1'))
       .map(m => `> ${m}`)
       .join('\n')
 
-    _actions_core__WEBPACK_IMPORTED_MODULE_0__.setOutput('commits', commits)
+    _actions_core__WEBPACK_IMPORTED_MODULE_0__.setOutput('commits', commitsStr)
   }
 }
 catch (error) {

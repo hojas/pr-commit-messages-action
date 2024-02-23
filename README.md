@@ -21,5 +21,5 @@ PR commit messages:
 ## Example usage
 
 ```yaml
-uses: hojas/pr-commit-messages-action@v1.0.4
+uses: hojas/pr-commit-messages-action@v1.0.6
 ```
